@@ -1,0 +1,70 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: inox <inox@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/20 12:23:51 by tgobert           #+#    #+#             */
+/*   Updated: 2025/10/21 21:57:27 by inox             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+#include "libft.h"
+
+static size_t	find_set(char const *s1, char const *set)
+{
+	size_t		del;
+	size_t		i;
+	size_t		j;
+	
+	del = 0;
+	i = -1;
+	j = 0;
+	while (++i < ft_strlen(set))
+	{
+		if (s1[i] == set[i])
+			j++;
+	}
+	if (j == ft_strlen(set))
+		del++;
+	i = ft_strlen(s1) - ft_strlen(set) - 1;
+	j = 0;
+	while (++i < ft_strlen(s1))
+	{
+		if (s1[i] == set[j])
+			j++;
+	}
+	if (j == ft_strlen(set))
+		del++;
+	return (del);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*trimmed;
+	size_t	len;
+	size_t	start;
+	size_t	i;
+
+	len = (ft_strlen(s1) - (ft_strlen(set) * find_set(s1, set))) + 1;
+	trimmed = malloc(sizeof(char) * len);
+	i = -1;
+	start = 0;
+	while (++i < ft_strlen(set))
+	{
+		if (s1[i] == set[i])
+			start++;
+	}
+	if (start != ft_strlen(set))
+		start = 0;
+	i = 0;
+	while (start < len)
+	{
+		trimmed[i] = s1[start];
+		i++;
+		start++;
+	}
+	return (trimmed);
+}
