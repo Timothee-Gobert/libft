@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inox <inox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:23:51 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/21 22:09:35 by inox             ###   ########.fr       */
+/*   Updated: 2025/10/22 07:45:21 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static size_t	find_set(char const *s1, char const *set)
 	size_t		del;
 	size_t		i;
 	size_t		j;
-	
+
 	del = 0;
 	i = -1;
 	j = 0;
