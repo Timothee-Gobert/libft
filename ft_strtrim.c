@@ -6,7 +6,7 @@
 /*   By: inox <inox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:23:51 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/21 21:57:27 by inox             ###   ########.fr       */
+/*   Updated: 2025/10/21 22:09:35 by inox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	i;
 
-	len = (ft_strlen(s1) - (ft_strlen(set) * find_set(s1, set))) + 1;
-	trimmed = malloc(sizeof(char) * len);
+	len = (ft_strlen(s1) - (ft_strlen(set) * find_set(s1, set)));
+	trimmed = malloc(sizeof(char) * len + 1);
 	i = -1;
 	start = 0;
 	while (++i < ft_strlen(set))
@@ -60,7 +60,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (start != ft_strlen(set))
 		start = 0;
 	i = 0;
-	while (start < len)
+	while (i < len)
 	{
 		trimmed[i] = s1[start];
 		i++;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_supp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
+/*   By: inox <inox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 10:28:28 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/21 08:52:25 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/10/21 22:03:19 by inox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ int main(void)
 		s1 = 'xxtestxx'\n\
 		set = 'xx'\n");
 
-	printf("resultat = %ld\n",ft_strtrim(s1, set));
+	printf("resultat = %s\n",ft_strtrim(s1, set));
 	return 0;
 }
