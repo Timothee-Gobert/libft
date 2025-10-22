@@ -6,7 +6,7 @@
 /*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 17:15:48 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/22 07:44:54 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/10/22 16:44:29 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*ptr;
 	size_t	i;
 
-	ptr = (char *) malloc(sizeof(char) * len);
+	ptr = (char *) malloc(sizeof(char) * len + 1);
 	if (!ptr)
 		return (NULL);
 	i = 0;
@@ -26,6 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		ptr[i] = s[i + start];
 		i++;
 	}
+	ptr[i] = '\0';
 	return (ptr);
 }
 
@@ -36,8 +37,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	char			s[] = "la chaine de laquelle extraire la nouvelle chaine.";
 // 	unsigned int	start;
 // 	size_t			len;
-// 	start = 22;
-// 	len = 8;
+// 	start = 0;
+// 	len = 10;
 // 	printf("%s\n", ft_substr(s, start, len));
 // 	return (0);
 // }

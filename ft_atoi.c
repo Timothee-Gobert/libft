@@ -6,7 +6,7 @@
 /*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:06:33 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/17 15:54:11 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/10/22 15:35:46 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ int	ft_atoi(const char *nptr)
 	while (*nptr == ' ' || ('\t' <= *nptr && *nptr <= '\r'))
 		nptr++;
 	n_p = 1;
-	if (*nptr == '-')
+	if (*nptr == '-' || *nptr == '+')
 	{
-		n_p *= -1;
+		if (*nptr == '-')
+			n_p *= -1;
 		nptr++;
 	}
 	number = 0;
@@ -36,5 +37,8 @@ int	ft_atoi(const char *nptr)
 // int main(void)
 // {
 // 	printf("%d\n", ft_atoi("     12545sdfj"));
+// 	printf("%d\n", ft_atoi("+548"));
+// 	printf("%d\n", ft_atoi("+47+5"));
+// 	printf("%d\n", ft_atoi("-+42+5"));
 // 	return (0);
 // }

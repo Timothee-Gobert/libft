@@ -6,7 +6,7 @@
 /*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:31:36 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/16 16:48:15 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/10/22 11:36:14 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,15 @@ char	*ft_strrchr(const char *s, int c)
 	char	*p;
 
 	p = NULL;
-	while (*s)
+	while (*s != '\0')
 	{
 		if (*s == c)
 			p = (char *)s;
 		s++;
+	}
+	if (c == 0)
+	{
+		return ((char *)s);
 	}
 	return (p);
 }
