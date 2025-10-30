@@ -6,12 +6,11 @@
 /*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:51:32 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/22 20:15:06 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/10/30 07:17:59 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	find_set_start(char const *s1, char const *set)
 {
@@ -72,9 +71,19 @@ int	find_set_end(char const *s1, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trimmed;
+	size_t	len;
+	size_t	i;
 
-	trimmed = NULL;
-	printf("%d\n", find_set_start(s1, set));
-	printf("%d\n", find_set_end(s1, set));
+	len = ft_strlen(s1) - find_set_start(s1, set) - find_set_end(s1, set);
+	trimmed = malloc(sizeof(char) * len + 1);
+	if (!trimmed)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		trimmed[i] = s1[find_set_start(s1, set) + i];
+		i++;
+	}
+	trimmed[i] = '\0';
 	return (trimmed);
 }

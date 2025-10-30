@@ -6,7 +6,7 @@
 /*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:59:20 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/21 10:05:00 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/10/30 09:48:49 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
