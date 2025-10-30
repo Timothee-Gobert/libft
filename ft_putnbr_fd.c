@@ -6,13 +6,13 @@
 /*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 08:34:27 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/30 09:44:52 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/10/30 12:10:18 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (n < 0)
 	{

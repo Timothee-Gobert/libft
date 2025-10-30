@@ -6,7 +6,7 @@
 #    By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 14:57:28 by tgobert           #+#    #+#              #
-#    Updated: 2025/10/30 10:11:52 by tgobert          ###   ########.fr        #
+#    Updated: 2025/10/30 13:56:37 by tgobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,9 @@ SRCS		=	ft_isalnum.c ft_isprint.c ft_isalpha.c ft_bzero.c ft_isascii.c \
 				ft_memcpy.c ft_strlcat.c ft_memmove.c ft_strlcpy.c ft_toupper.c\
 				ft_tolower.c ft_strchr.c ft_strrchr.c ft_memchr.c ft_memcmp.c\
 				ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c\
-				ft_strjoin.c ft_strtrim.c 
+				ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c\
+				ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
+				ft_putnbr_fd.c 
 
 OBJS		= $(SRCS:.c=.o)
 
@@ -29,14 +31,17 @@ NAME		= libft.a
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS)
-	ar rcs $(NAME) $(OBJS)
-
 %.o: %.c libft.h
 	cc $(CFLAGS) -c $< -o $@
 
+$(NAME):	$(OBJS)
+	ar rcs $(NAME) $(OBJS)
+
+bonus:	$(OBJS_BONUS) libft.h
+	ar rcs $(NAME) $(OBJS_BONUS)
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean:		clean
 	rm -f $(NAME)

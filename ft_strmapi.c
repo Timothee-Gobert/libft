@@ -6,7 +6,7 @@
 /*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 10:13:52 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/29 11:10:43 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/10/30 12:09:36 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@
 // 	return (c -= i);
 // }
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*dest;
-	unsigned int i;
-	
+	char			*dest;
+	unsigned int	i;
+
 	dest = malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!dest)
 		return (NULL);
@@ -46,7 +46,6 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 
 // #include <stdio.h>
-
 // int main(void)
 // {
 // 	printf("%s", ft_strmapi("bcdef", fonction_plus));

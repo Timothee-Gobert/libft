@@ -6,7 +6,7 @@
 /*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 08:31:07 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/22 15:06:26 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/10/30 11:27:43 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
 
 // #include <bsd/string.h>
 // #include <stdio.h>
