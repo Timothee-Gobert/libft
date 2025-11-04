@@ -6,7 +6,7 @@
 #    By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 14:57:28 by tgobert           #+#    #+#              #
-#    Updated: 2025/10/30 13:56:37 by tgobert          ###   ########.fr        #
+#    Updated: 2025/11/04 10:31:51 by tgobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,11 +21,14 @@ SRCS		=	ft_isalnum.c ft_isprint.c ft_isalpha.c ft_bzero.c ft_isascii.c \
 
 OBJS		= $(SRCS:.c=.o)
 
-SRCS_BONUS	= ft_lstnew_bonus.c
+SRCS_BONUS	=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
+				ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c\
+				ft_lstclear_bonus.c
 
 OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 
 CFLAGS		= -Wall -Wextra -Werror
+CFLAGS		+= -g
 
 NAME		= libft.a
 

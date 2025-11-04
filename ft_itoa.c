@@ -6,7 +6,7 @@
 /*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 08:37:28 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/29 10:46:19 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/11/03 08:34:39 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,6 @@ char	*ft_itoa(int n)
 
 // int main(void)
 // {
-// 	printf("%s",ft_itoa(-2147483648));
+// 	printf("%s",ft_itoa(0));
 // 	return (0);
 // }

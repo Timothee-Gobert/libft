@@ -6,7 +6,7 @@
 /*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:51:32 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/30 07:17:59 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/11/03 07:50:22 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	find_set_end(char const *s1, char const *set)
 
 	temp = -1;
 	nbr = 0;
-	i = ft_strlen(s1);
+	i = ft_strlen(s1) - 1;
 	while (i > 0 && temp != nbr)
 	{
 		temp = nbr;

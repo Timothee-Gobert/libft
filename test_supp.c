@@ -6,7 +6,7 @@
 /*   By: tgobert <tgobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 10:28:28 by tgobert           #+#    #+#             */
-/*   Updated: 2025/10/29 11:02:52 by tgobert          ###   ########.fr       */
+/*   Updated: 2025/11/04 11:15:50 by tgobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,46 @@
 
 int main(void)
 {
-	char	*s1;
-	char	*s2;
-	char	*set; 
+	// char	*s1;
+	// char	*s2;
+	// char	*set; 
 
-	s1 = "un";
-	s2 = "deux";
-	printf("Test de la fonction ft_strjoin avec\n\
-		s1 = 'un'\n\
-		s2 = 'deux'\n");
-	printf("resultat = %s\n",ft_strjoin(s1, s2));
+	// s1 = "un";
+	// s2 = "deux";
+	// printf("Test de la fonction ft_strjoin avec\n\
+	// 	s1 = 'un'\n\
+	// 	s2 = 'deux'\n");
+	// printf("resultat = %s\n",ft_strjoin(s1, s2));
 
-	s1 = "leorem ipsum dolor sit amet";
-	set = "lllteeeee";
-	printf("\nTest de la fonction ft_strtrim avec\n\
-		s1 = '%s'\n\
-		set = '%s'\n",s1, set);
+	// s1 = "leorem ipsum dolor sit amet";
+	// set = "lllteeeee";
+	// printf("\nTest de la fonction ft_strtrim avec\n\
+	// 	s1 = '%s'\n\
+	// 	set = '%s'\n",s1, set);
 
-	printf("resultat = %s\n",ft_strtrim(s1, set));
+	// printf("resultat = %s\n\n",ft_strtrim(s1, set));
+	
+	char	*s = " zzz ifghjkgsfdigsfdjga ici      iodoi   i";
+	char	c;
+	char	**tab;
+	int		i;
+	
+	c = ' ';
+	i = 0;
+	tab = ft_split(s, c);
+	
+	printf("Test de la fonction ft_split avec\n"
+		"s = \"%s\"\n"
+		"c = '%c'\n", s, c);
+
+	while (tab[i])
+	{
+		printf("%s\n", tab[i++]);
+	}
+
+	// printf("Test de la fonction ft_itoa avec\n\
+	// 	n = -42\n");
+	// printf("%s\n", ft_itoa(-42));
+	
 	return 0;
 }
